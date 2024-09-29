@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  src: url("./Fonts/Nunito_Sans/NunitoSans_10pt-Regular.ttf");
+  font-family: Nunito Sans;
+}
+
+:root {
+  --main-color: #333;
+  --sub1-color: #fff;
+  --hover-main-color: #6c63ff;
+  --main-background-color: #fff;
+  --sub1-background-color: #6c63ff;
+  --sub2-background-color: #f8f9fa;
+  --footer-background-color: #000;
+  --main-button-color: #fff;
+  --main-button-background-color: #6c63ff;
+  --sub-button-background-color: #ff6347;
+  --hover-main-button-background-color: #3a3768;
+  --hover-sub-button-background-color: #fa5347;
+  --main-button-border: 1px solid #6c63ff;
+  --sub-button-border: 1px solid #ff6347;
+  --main-font-family: Nunito Sans;
+  --sub-font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font-family);
+  color: var(--main-color);
+}
+
