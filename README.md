@@ -1,0 +1,2 @@
+# TalentLoop
+Angular Project
