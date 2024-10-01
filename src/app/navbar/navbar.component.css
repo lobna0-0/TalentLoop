@@ -1,50 +1,69 @@
-.nav{
-  margin-top: 20px;
+/*.nav {
+    margin-top: 20px;
+}*/
+
+.navbar {
+    margin-right: 6%;
 }
+
+.main-link {
+    font-weight: bolder;
+}
+
 .collapse.show {
-  display: block !important;
+    display: block !important;
 }
-@media (max-width:  768px) {
-  .collapse.show {
-    display: none !important;
-  }
+
+@media (max-width: 768px) {
+    .collapse.show {
+        display: none !important;
+    }
 }
+
+
 /* .navbar-collapse {
   z-index: 1060;
   overflow: hidden;
 } */
-.nav .container .collapse ul li{
-  margin-left: 10px;
+
+.nav .container .collapse ul li {
+    margin-left: 10px;
 }
-.nav .navbar-brand{
-  font-weight: bold;
-  font-size: 20px;
+
+.nav .navbar-brand {
+    font-weight: bold;
+    font-size: 20px;
 }
-.nav .nav-link.active{
-  color: var(--hover-main-color) !important;
+
+.nav .nav-link.active {
+    color: var(--hover-main-color) !important;
 }
-.nav .nav-link:hover{
-  color: var(--hover-main-color);
+
+.nav .nav-link:hover {
+    color: var(--hover-main-color);
 }
-.nav .nav-link.post{
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 1px solid var(--main-button-background-color);
-  background-color: var(--main-button-background-color);
-  border-radius: 4px;
-  color: white;
+
+.nav .nav-link.post {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid var(--main-button-background-color);
+    background-color: var(--main-button-background-color);
+    border-radius: 4px;
+    color: white;
 }
+
 .nav .nav-link.active.post,
-.nav .nav-link.active.want{
-  color: white !important;
+.nav .nav-link.active.want {
+    color: white !important;
 }
-.nav .nav-link.want{
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 1px solid var(--sub-button-background-color);
-  background-color: var(--sub-button-background-color);
-  border-radius: 4px;
-  color: white;
+
+.nav .nav-link.want {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid var(--sub-button-background-color);
+    background-color: var(--sub-button-background-color);
+    border-radius: 4px;
+    color: white;
 }
