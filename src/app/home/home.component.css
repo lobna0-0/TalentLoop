@@ -1,0 +1,93 @@
+
+.landing img{
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  position: relative;
+}
+.landing .text{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  right: 0;
+  max-width: 50%;
+  padding-left: 45px;
+}
+.landing .text p{
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+}
+.landing .text p span{
+  color: #ff6347;
+}
+.landing .text h1{
+  font-size: 60px;
+  color: #000000;
+  line-height: 1.2;
+  font-weight: 900;
+  max-width: 70%;
+}
+.landing .search .nav-link{
+  color: black;
+  font-size: 20px;
+  border-bottom: 1px solid var(--sub1-background-color);
+}
+.landing .search .nav-link.active{
+  background-color: var(--sub1-background-color);
+  color: white;
+}
+.landing .wrap .tab-content{
+  background-color: var(--sub1-background-color);
+  border: 1px solid var(--sub1-background-color);
+  border-radius: 0 6px 6px 6px;
+  /* width: 80%; */
+  /* overflow: hidden; */
+  height: 90px;
+  padding-left: 5px;
+
+}
+.landing .wrap .tap-input{
+  position: relative;
+  display: flex;
+  padding-top: 15px;
+  width: 100%;
+}
+.landing .wrap .tap-input input::placeholder{
+  text-align: center;
+}
+.landing .wrap .tap-input input,
+.landing .wrap .tap-input select{
+  width: 95%;
+  background-color: white;
+  border: 1px solid transparent;
+  height: 50px;
+  margin: auto;
+  color: rgba(0, 0, 0, 0.5) ;
+  border-radius: 6px;
+  padding-left: 30px;
+  margin: 5px;
+}
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-icon i{
+  position: absolute;
+  left: 15px;
+  color: rgba(0, 0, 0, 0.5) ;
+  z-index: 1;
+}
+.landing .wrap .tap-input select option{
+  color: rgba(0, 0, 0, 0.5) ;
+}
+.landing .wrap .tap-input button{
+  width: 95%;
+  height: 50px;
+  color: #fff ;
+  background:var(--sub-button-background-color) ;
+  border: 1px solid var(--sub-button-background-color);
+  border-radius: 6px;
+  margin: 5px;
+}
