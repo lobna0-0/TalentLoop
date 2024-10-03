@@ -1,0 +1,36 @@
+.main3 {
+  padding: 100px 0px;
+  background-image: url("../../../public/img/bg_1.jpg");
+  object-fit: cover;
+  object-position: center;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.main3::after {
+  content: "";
+  background-color: var(--sub1-background-color);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: .9;
+}
+
+.main3 .num {
+  font-size: 34px;
+  font-weight: 500;
+}
+
+.main3 .descrp {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffffb3;
+}
+
+.main3 span i {
+  font-size: 60px;
+}

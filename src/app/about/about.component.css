@@ -1,0 +1,37 @@
+.main1{
+  background-image: url("../../../public/img/bg_1.jpg");
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+  background-size: cover;
+  background-position: top right;
+  background-attachment: fixed;
+}
+.about-cont{
+  height: calc(100% - 59.33px);
+}
+.breadcrumb-item{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 2px;
+}
+.about-text{
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.2;
+  font-family: var(--main-font-family);
+  margin: 0px;
+  padding: 0px;
+}
+.main2{
+  padding: 112px 0px;
+}
+.main2 h2{
+  font-weight: 700;
+}
+.main2 p{
+  font-weight: 400;
+  line-height: 1.8;
+  font-size: 16px;
+}
