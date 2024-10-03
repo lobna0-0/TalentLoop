@@ -5,6 +5,7 @@
   object-position: center;
   background-size: cover;
   background-position: top right;
+  background-attachment: fixed;
 }
 .about-cont{
   height: calc(100% - 59.33px);
@@ -17,9 +18,9 @@
 }
 .about-text{
   font-size: 60px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.2;
-  font-family: var(--sub-font-family);
+  font-family: var(--main-font-family);
   margin: 0px;
   padding: 0px;
 }
