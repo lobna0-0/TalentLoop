@@ -7,6 +7,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { PostAJopComponent } from './post-a-jop/post-a-jop.component';
 import { WantAJopComponent } from './want-a-jop/want-a-jop.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },  // Default Route
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'Post-a-jop', component: PostAJopComponent },
   { path: 'want-a-jop', component: WantAJopComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

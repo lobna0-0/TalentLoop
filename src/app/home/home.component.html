@@ -3,7 +3,7 @@
 <div class="landing">
     <div class="container px-0">
         <div class="row mt-5">
-            <div class="col-lg-5">
+            <div class="col-lg-6 col-md-12">
               <div class="text mt-5 ">
                 <p class="mb-4 mt-5 mt-5">We have <span class="number">{{ jopCount | number }}</span> great jop offer you deserve!</p>
                 <h1 class="mb-5">Largets Job Site In The World</h1>
@@ -12,19 +12,21 @@
                     <div class="col-md-12">
                       <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Find a Jop</a>
+                            <a class="nav-link" [class.active]="activeTab === 'job'" (click)="switchTab('job')">Find a Jop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Find a Candidate</a>
+                            <a class="nav-link" [class.active]="activeTab === 'candidate'" (click)="switchTab('candidate')" >Find a Candidate</a>
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-12 wrap">
                       <div class="tab-content">
-                        <div class="tap-input show">
-                          <div class="input-icon">
-                            <i class="fa-solid fa-briefcase"></i>
-                            <input type="text" placeholder="eg. Graphic, Web Developer">
+                        <div *ngIf="activeTab === 'job'" class="tap-input">
+                          <div class="col-md">
+                            <div class="input-icon">
+                              <i class="fa-solid fa-briefcase"></i>
+                              <input type="text" placeholder="eg. Garphic. Web Developer">
+                            </div>
                           </div>
                           <div class="col-md">
                               <select name="" id="">
@@ -46,12 +48,12 @@
                             <button>Search</button>
                           </div>
                         </div>
-                        <!-- <div class="tap-input ">
+                        <div *ngIf="activeTab === 'candidate'" class="tap-input">
                           <div class="col-md">
-                            <div class="icon">
+                            <div class="input-icon">
                               <i class="fa-solid fa-briefcase"></i>
+                              <input type="text" placeholder="eg. Adam Scott">
                             </div>
-                            <input type="text" placeholder="eg. Adam Scott">
                           </div>
                           <div class="col-md">
                             <select name="" id="">
@@ -64,29 +66,197 @@
                             </select>
                           </div>
                           <div class="col-md">
+                            <div class="input-icon">
                               <i class="fa-solid fa-location-dot"></i>
                             <input type="text" placeholder="Location">
+                            </div>
                           </div>
                           <div class="col-md">
                             <button>Search</button>
                           </div>
-                        </div> -->
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-              <div class="col-lg-7">
+              <div class="col-lg-6 col-md-12">
                 <img src="./img/undraw_work_time_lhoj.svg" alt="">
               </div>
             </div>
           </div>
         </div>
-
 <!-- end landing -->
-
+<!-- start section-1 -->
+<div class="section-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <i class="fa-solid fa-file-pen"></i>
+        <h3>Search Millions of Jobs</h3>
+        <p>A small river named Duden flows by their place and supplies.</p>
+      </div>
+      <div class="col-lg-3">
+        <i class="fa-solid fa-users-gear"></i>
+        <h3>Easy To Manage Jobs</h3>
+        <p>A small river named Duden flows by their place and supplies.</p>
+      </div>
+      <div class="col-lg-3">
+        <i class="fa-solid fa-chart-simple"></i>
+        <h3>Top Careers</h3>
+        <p>A small river named Duden flows by their place and supplies.</p>
+      </div>
+      <div class="col-lg-3">
+        <i class="fa-solid fa-user-tie"></i>
+        <h3>Search Expert Candidates</h3>
+        <p>A small river named Duden flows by their place and supplies.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end section-1 -->
 <app-top-categories></app-top-categories>
-<app-hot-jops></app-hot-jops>
+<!-- start search-jop -->
+<div class="search-jop">
+  <div class="img">
+    <img src="./img/bg_1.jpg" alt="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="browse-jop p-5">
+            <span class="icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <span class="subheading">Search Job</span>
+            <h2>Browse Job by Specialism</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+              Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end search-jop -->
+<!-- start hot jops -->
+<div class="hot">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10">
+        <app-hot-jops></app-hot-jops>
+      </div>
+      <div class="col-lg-2 ">
+        <p>Recruitment agencies</p>
+        <h2>Top Recruitments</h2>
+        <div class="companys">
+          <div class="card" style="width: 18rem;">
+            <img src="./img/company-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Google Company</h5>
+              <p class="card-text"><span>500</span> Open position</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./img/company-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Facebook Company</h5>
+              <p class="card-text"><span>700</span> Open position</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./img/company-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">IT Programming INC</h5>
+              <p class="card-text"><span>700</span> Open position</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end hot jops -->
+
 <app-counter-testimonials></app-counter-testimonials>
+
+<!-- start latest canditates -->
+<div class="latest-canditates">
+  <div class="container">
+    <div class="row">
+      <p>Candidates</p>
+      <h2>Latest Candidates</h2>
+      <div class="boxes">
+        <div class="col-lg-2">
+          <img src="./img/person_1.jpg" alt="">
+          <h3>Nicole Simon</h3>
+          <p>Western City, UK</p>
+        </div>
+        <div class="col-lg-2">
+          <img src="./img/person_2.jpg" alt="">
+          <h3>Cloe Meyer</h3>
+          <p>Western City, UK</p>
+        </div>
+        <div class="col-lg-2">
+          <img src="./img/person_3.jpg" alt="">
+          <h3>Rechel Clinton</h3>
+          <p>Western City, UK</p>
+        </div>
+        <div class="col-lg-2">
+          <img src="./img/person_4.jpg" alt="">
+          <h3>Dave Buff</h3>
+          <p>Western City, UK</p>
+        </div>
+        <div class="col-lg-2">
+          <img src="./img/person_5.jpg" alt="">
+          <h3>Dave Buff</h3>
+          <p>Western City, UK</p>
+        </div>
+        <div class="col-lg-2">
+          <img src="./img/person_6.jpg" alt="">
+          <h3>Danica Lewis</h3>
+          <p>Western City, UK</p>
+        </div>
+      </div>
+      <!-- <div class="bullets">
+        <span (click)="onBulletClick(0)" ></span>
+        <span  (click)="onBulletClick(1)" class="active"></span>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- end latest canditates -->
+
+<!-- start latest recent blog -->
+<div class="recent-blog">
+  <div class="container">
+    <div class="row">
+      <p>Our Blog</p>
+      <h1>Recent <strong>Blog</strong> </h1>
+      <div class="boxes">
+        <div class="col-lg-3">
+          <img src="./img/image_1.jpg" alt="">
+          <p>May 3, 2019 Admin <i class="fa-solid fa-message"></i> 3</p>
+          <p>Even the all-powerful Pointing has no control about the blind texts</p>
+        </div>
+        <div class="col-lg-3">
+          <img src="./img/image_2.jpg" alt="">
+          <p>May 3, 2019 Admin <i class="fa-solid fa-message"></i> 3</p>
+          <p>Even the all-powerful Pointing has no control about the blind texts</p>
+        </div>
+        <div class="col-lg-3">
+          <img src="./img/image_3.jpg" alt="">
+          <p>May 3, 2019 Admin <i class="fa-solid fa-message"></i> 3</p>
+          <p>Even the all-powerful Pointing has no control about the blind texts</p>
+        </div>
+        <div class="col-lg-3">
+          <img src="./img/image_4.jpg" alt="">
+          <p>May 3, 2019 Admin <i class="fa-solid fa-message"></i> 3</p>
+          <p>Even the all-powerful Pointing has no control about the blind texts</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end latest recent blog -->
 <app-footer></app-footer>
