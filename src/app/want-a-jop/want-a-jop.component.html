@@ -1,1 +1,115 @@
-<p>want-a-jop works!</p>
+    <!-- LANDING -->
+    <div class="landing">
+      <app-navbar></app-navbar>
+      <div class="overlay"></div>
+      <div class="box">
+        <span class="info">
+          <a href="#">HOME</a>
+          <i class="fas fa-angle-right"></i>
+          <span class="post">JOB POSTS</span>
+        </span>
+        <h1>Apply Jobs</h1>
+      </div>
+    </div>
+
+
+  <!-- SEARCH BAR -->
+  <div class="search">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+              <a class="nav-link" [class.active]="activeTab === 'job'" (click)="switchTab('job')">Find a Jop</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" [class.active]="activeTab === 'candidate'" (click)="switchTab('candidate')" >Find a Candidate</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-12 wrap">
+        <div class="tab-content">
+          <div *ngIf="activeTab === 'job'" class="tap-input">
+            <div class="col-md">
+              <div class="input-icon">
+                <i class="fa-solid fa-briefcase"></i>
+                <input type="text" placeholder="eg. Garphic. Web Developer">
+              </div>
+            </div>
+            <div class="col-md">
+                <select name="" id="">
+                  <option value="">Category</option>
+                  <option value="">Full Time</option>
+                  <option value="">Part Time</option>
+                  <option value="">Freelance</option>
+                  <option value="">Internship</option>
+                  <option value="">Temporary</option>
+                </select>
+            </div>
+            <div class="col-md">
+              <div class="input-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" placeholder="Location">
+              </div>
+            </div>
+            <div class="col-md">
+              <button>Search</button>
+            </div>
+          </div>
+          <div *ngIf="activeTab === 'candidate'" class="tap-input">
+            <div class="col-md">
+              <div class="input-icon">
+                <i class="fa-solid fa-briefcase"></i>
+                <input type="text" placeholder="eg. Adam Scott">
+              </div>
+            </div>
+            <div class="col-md">
+              <select name="" id="">
+                <option value="">Category</option>
+                <option value="">Full Time</option>
+                <option value="">Part Time</option>
+                <option value="">Freelance</option>
+                <option value="">Internship</option>
+                <option value="">Temporary</option>
+              </select>
+            </div>
+            <div class="col-md">
+              <div class="input-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              <input type="text" placeholder="Location">
+              </div>
+            </div>
+            <div class="col-md">
+              <button>Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP CATEGORIES -->
+  <app-top-categories></app-top-categories>
+
+
+
+  <!-- HOT JOBS -->
+  <app-hot-jops></app-hot-jops>
+
+    <!-- PAGINATION -->
+
+  <div class="block">
+    <div class="pagination">
+      <ul>
+        <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+        <li  class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+<app-footer></app-footer>
+

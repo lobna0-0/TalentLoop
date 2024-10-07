@@ -1,0 +1,243 @@
+:root {
+  --temporary-background-color:#DC3545;
+  --internship-background-color:#6C757D;
+  --freelance-background-color:#17A2B8;
+  --fulltime-background-color:#FFC107;
+  --partime-background-color:#6C63FF;
+  --heart-background-color:#FFE5E0;
+  --location-color:#c5c5c5;
+  --jobs-background-color: #F8F9FA;
+  --heart-color:#FF6347;
+}
+.section-two {
+  padding-block: 6em;
+  position: relative;
+  padding-inline: 60px;
+  background-color: var(--jobs-background-color);
+  overflow-x: hidden;
+}
+
+.jobs {
+  width: 100%;
+  padding-inline: 15px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.box-two {
+  margin-block: 10px;
+  padding-block: 10px;
+}
+
+.box-text {
+  text-align: center;
+  margin-inline: -15px;
+}
+
+.heading-two{
+  position: relative;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.heading-two span {
+  color: gray;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.heading-two .top {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  color: var(--main-color);
+}
+
+.column-jobs {
+  padding-block: 12px;
+  margin-block: 12px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #ddd;
+}
+.job-details {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.job-details .details {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  padding-bottom: 12px;
+}
+
+.job-details .details a {
+  color: #333;
+  text-decoration: none;
+}
+
+.job-title {
+  font-size: 28px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  color: var(--location-color);
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.location a {
+  color: var(--hover-main-color);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.location i {
+  margin-right: 5px;
+}
+
+.job-type {
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 75%;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 12px;
+  height: 36px;
+
+}
+
+.apply-button {
+  display: flex;
+  align-items: center;
+}
+
+.apply-button i {
+  color: #ff6b6b;
+  font-size: 24px;
+  margin-right: 10px;
+  background-color: rgb(242, 239, 239);
+  padding: 12px;
+  border-radius: 27px;
+}
+
+.column-jobs:hover .apply-button i {
+  color: white;
+  background-color: var(--hover-sub-button-background-color);
+}
+
+.apply-button button {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+@media (max-width: 1024px) {
+  /* .heading-two .top {
+    font-size: 24px;
+  } */
+
+  .job-title {
+    font-size: 24px;
+  }
+
+  .job-type {
+    padding: 8px 20px; /* Reduce padding */
+  }
+}
+@media (max-width: 768px) {
+  .jobs {
+    padding-inline: 10px; /* Reduce padding for smaller screens */
+  }
+  /* .heading-two .top {
+    font-size: 22px;
+  } */
+
+  .job-title {
+    font-size: 22px;
+  }
+
+
+  .apply-button button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 426px) {
+  .section-two{
+    width: 100%;
+  }
+  .jobs {
+    width: 100%;
+    padding-inline: 10px; /* Reduce padding for smaller screens */
+  }
+
+  /* .heading-two .top {
+    font-size: 18px;
+  } */
+
+  .job-title {
+    margin-right: 30px;
+    font-size: 18px;
+  }
+  .job-type{
+    margin-left: 50px;
+    margin-top: 5px;
+  }
+  .column-jobs {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Ensure text aligns to the left */
+  }
+
+  .apply-button {
+    margin-top: 10px; /* Add margin on smaller screens to separate the button */
+  }
+
+  .apply-button button {
+    font-size: 12px;
+  }
+}
+
+
+.bg-freelance {
+  background-color: #17A2B8;
+}
+
+.bg-internship {
+  background-color: #6C757D;
+}
+
+.bg-fulltime {
+  background-color: #FFC107;
+}
+
+.bg-partime {
+  background-color: #DC3545;
+}
+.bg-temporary {
+  background-color: #6C63FF;
+}
+
+
+/*animation*/
+.column-jobs{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+.move-up {
+  opacity: 1 !important;
+  transform: translateY(0)  !important;
+  transition: all 0.9s ease-in-out !important;
+}

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './want-a-jop.component.css'
 })
 export class WantAJopComponent {
-
+   //code navTab
+    activeTab: string = 'job';
+    switchTab(tab: string){
+      this.activeTab = tab;
+    }
 }

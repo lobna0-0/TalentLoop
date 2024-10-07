@@ -1,0 +1,205 @@
+:root {
+  --temporary-background-color:#DC3545;
+  --internship-background-color:#6C757D;
+  --freelance-background-color:#17A2B8;
+  --fulltime-background-color:#FFC107;
+  --partime-background-color:#6C63FF;
+  --heart-background-color:#FFE5E0;
+  --location-color:#c5c5c5;
+  --jobs-background-color: #F8F9FA;
+  --heart-color:#FF6347;
+}
+/* ################################ LANDING HEADER ################################ */
+.landing {
+  background-image: url(../../../public/img/bg_1.jpg);
+  height: 600px;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+}
+
+/* .landing .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  opacity: 0;
+  background:black
+} */
+
+.landing .box {
+  width: 100%;
+  padding-inline: 15px;
+  margin-inline: 30px;
+  position: absolute;
+  bottom: 9%;
+  left: 2%;
+}
+
+@media (min-width: 576px) {
+  .box {
+    max-width: 540px;
+  }
+}
+
+.landing .box .info a{
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  padding-right: 4px;
+  letter-spacing: 2px;
+}
+
+.landing .box .info .blog {
+  color: rgba(0, 0, 0, 0.7);
+  padding-left: 20px;
+  letter-spacing: 2px;
+}
+
+.landing .box .info a,
+.landing .box .info i,
+.landing .box .info .blog {
+  font-size: small;
+  font-weight: 900;
+}
+
+
+.landing .box h1 {
+  font-size: 60px;
+  color: #000000;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+/* ################################ SECTION OF CARDS ################################ */
+
+.section{
+  text-align: center;
+  padding: 100px 0;
+}
+
+.section p{
+  color: rgb(136, 133, 133);
+  font-size: 18px;
+}
+.section h1{
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.section .boxes{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.section .col-lg-3{
+  width: 23%;
+  margin-bottom: 30px;
+  text-align: left;
+  cursor: pointer;
+}
+.section .boxes img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.section .col-lg-3 p{
+  font-size: 16px;
+  color: #000;
+  margin: 5px 0;
+}
+.section .col-lg-3 p:nth-child(2){
+  color: gray;
+  font-size: 14px;
+}
+.section .col-lg-3 i{
+  color: gray;
+  font-size: 14px;
+  margin: 0 3px;
+}
+.section .col-lg-3:hover p:last-child{
+  color: var(--sub1-background-color);
+}
+@media (max-width: 1024px) {
+  .section .col-lg-3{
+    width: 46%;
+  }
+}
+@media (max-width: 768px) {
+  .section .col-lg-3{
+    width: 48%;
+  }
+}
+@media (max-width:  426px) {
+  .section .col-lg-3{
+    width: 95%;
+    margin: auto;
+  }
+}
+
+/* ################################ Pagination Of Pages ################################ */
+
+.block {
+  /* display: block; */
+  text-align: center;
+  padding-inline: 15px;
+  width: 100%;
+  padding-bottom: 5em ;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+}
+.pagination ul {
+  padding: 0px;
+}
+
+.pagination ul li:hover,
+.pagination ul .active{
+  background-color: var(--hover-sub-button-background-color);
+  color: white;
+}
+
+.pagination ul li {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  border: 1px solid var(--sub-button-background-color);
+  color: var(--sub-button-background-color);
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.pagination ul li a {
+  color: var(--pagination-color);
+  text-decoration: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--pagination-border);
+
+}
+
+.pagination ul li a i {
+  color: var(--pagination-color);
+}
+@media (max-width: 426px) {
+  .pagination ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pagination ul li {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}

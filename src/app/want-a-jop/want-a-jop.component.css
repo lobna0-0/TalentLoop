@@ -1,0 +1,305 @@
+:root {
+  --temporary-background-color:#DC3545;
+  --internship-background-color:#6C757D;
+  --freelance-background-color:#17A2B8;
+  --fulltime-background-color:#FFC107;
+  --partime-background-color:#6C63FF;
+  --heart-background-color:#FFE5E0;
+  --location-color:#c5c5c5;
+  --jobs-background-color: #F8F9FA;
+  --heart-color:#FF6347;
+}
+/* ################################ SECTION OF CARDS ################################ */
+.landing {
+  background-image: url(../../../public/img/bg_1.jpg);
+  height: 600px;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+}
+/* .landing .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  opacity: 0;
+  background:black
+} */
+
+.landing .box {
+  width: 100%;
+  padding-inline: 15px;
+  margin-inline: 30px;
+  position: absolute;
+  bottom: 9%;
+  left: 2%;
+}
+
+@media (min-width: 576px) {
+  .box {
+    max-width: 540px;
+  }
+}
+
+.landing .box .info a{
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  padding-right: 4px;
+  letter-spacing: 2px;
+}
+
+.landing .box .info .post {
+  color: rgba(0, 0, 0, 0.7);
+  padding-left: 20px;
+  letter-spacing: 2px;
+}
+
+.landing .box .info a,
+.landing .box .info i,
+.landing .box .info .post {
+  font-size: small;
+  font-weight: 900;
+}
+
+/* ################################ SEARCH BAR ################################ */
+
+.search {
+  margin: 6em 4em;
+  background-color: var(--jobs-background-color);
+}
+
+.search .nav-link{
+  color: black;
+  font-size: 20px;
+  border-bottom: 1px solid var(--sub1-background-color);
+}
+.search .nav-link.active{
+  background-color: var(--sub1-background-color);
+  color: white;
+}
+.wrap .tab-content{
+  background-color: var(--sub1-background-color);
+  border: 1px solid var(--sub1-background-color);
+  border-radius: 0 6px 6px 6px;
+  height: auto;
+  padding: 20px 10px;
+}
+.wrap .tap-input{
+  position: relative;
+  display: flex;
+  padding-top: 15px;
+  width: 100%;
+}
+.wrap .tap-input input::placeholder{
+  text-align: center;
+}
+.wrap .tap-input input,
+.wrap .tap-input select{
+  width: 95%;
+  background-color: white;
+  border: 1px solid transparent;
+  height: 50px;
+  margin: auto;
+  color: rgba(0, 0, 0, 0.5) ;
+  border-radius: 6px;
+  padding-left: 30px;
+  margin: 5px;
+}
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-icon i{
+  position: absolute;
+  left: 15px;
+  color: rgba(0, 0, 0, 0.5) ;
+  z-index: 1;
+}
+.wrap .tap-input select option{
+  color: rgba(0, 0, 0, 0.5) ;
+}
+.wrap .tap-input button{
+  width: 95%;
+  height: 50px;
+  color: #fff ;
+  background:var(--sub-button-background-color) ;
+  border: 1px solid var(--sub-button-background-color);
+  border-radius: 6px;
+  margin: 5px;
+}
+
+@media (max-width: 1024px) {
+  .landing .text{
+    left: 20px;
+    max-width: 70%;
+    padding-left: 20px;
+  }
+  .landing .text h1{
+    font-size: 40px;
+  }
+  .landing .wrap .tab-content{
+    width: 100%;
+    z-index: 1;
+  }
+  .landing .wrap .tap-input input{
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .text{
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 100%;
+    padding-left: 35px;
+  }
+  /* .landing img{
+    width: 100%;
+    height: 100%;
+  } */
+  .wrap .tap-input input{
+    padding-left: 30px;
+  }
+  .wrap .tap-input input,
+  .wrap .tap-input select,
+  .wrap .tap-input button{
+    width: 95%;
+    margin: auto 1px;
+  }
+  .wrap .tab-content{
+    width: 100%;
+    z-index: 1;
+  }
+  .text {
+    padding-left: 10px;
+  }
+
+  .text h1 {
+    font-size: 30px;
+  }
+
+  .wrap .tab-content {
+    height: auto;
+  }
+}
+
+@media (max-width: 426px) {
+  img {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    position: relative;
+  }
+
+  .text {
+    position: absolute;
+    top: 38%;
+    left: 20px; /* Adjusted for smaller screens */
+    transform: translateY(-50%);
+    right: 0;
+    max-width: 90%; /* Adjusted to fit text better on smaller screens */
+    padding-left: 10px;
+  }
+
+  .text h1 {
+    font-size: 20px; /* Reduced font size for smaller screens */
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .wrap .tap-input {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Ensure column layout on small screens */
+    padding-top: 15px;
+    width: 100%;
+  }
+
+  .wrap .tap-input input,
+  .wrap .tap-input select,
+  .wrap .tap-input button {
+    width: 100%; /* Full width for input, select, and button */
+    margin: 5px 0; /* Adjust margin for better spacing */
+  }
+
+  .wrap .tap-input select{
+    padding-left: 150px;
+  }
+
+  .input-icon i {
+    left: 10px; /* Adjust icon position for smaller screens */
+  }
+}
+
+/* ################################ TOP CATEGORIES ################################ */
+
+/* ################################ HOT JOBS ################################ */
+
+/* ################################ Pagination Of Pages ################################ */
+.block {
+  /* display: block; */
+  text-align: center;
+  padding-inline: 15px;
+  width: 100%;
+  padding-bottom: 5em ;
+
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.pagination ul {
+  padding: 0px;
+}
+
+.pagination ul li:hover,
+.pagination ul .active{
+  background-color: var(--hover-sub-button-background-color);
+  color: white;
+}
+
+.pagination ul li {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  border: 1px solid var(--sub-button-background-color);
+  color: var(--sub-button-background-color);
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.pagination ul li a {
+  color: var(--pagination-color);
+  text-decoration: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--pagination-border);
+
+}
+
+.pagination ul li a i {
+  color: var(--pagination-color);
+}
+@media (max-width: 426px) {
+  .pagination ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pagination ul li {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
