@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+
+<header>
+  <div class="container">
+    <div class="page-info animate__animated animate__fadeInUp animate__duration-800ms">
+      <h1 class="title">{{ pageTitle }}</h1>
+      <p class="breadcrumbs">
+        <span><a routerLink="/" routerLinkActive="active">HOME <i class="fa-solid fa-angle-right"></i></a></span>
+        <span *ngFor="let breadcrumb of breadcrumbs">{{ breadcrumb }}</span>
+      </p>
+    </div>
+  </div>
+</header>
