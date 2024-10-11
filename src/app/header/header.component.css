@@ -1,0 +1,57 @@
+header {
+    margin: 0;
+    background-image: url("../../../public/img/bg_1.jpg");
+    background-size: cover;
+    background-position: 50% 0%;
+    background-attachment: fixed;
+    padding: 20px;
+    height: 600px;
+    z-index: 0;
+    position: relative;
+}
+
+.page-info {
+    display: flex;
+    align-items: flex-start;
+    height: 400px;
+    flex-direction: column-reverse;
+}
+
+.breadcrumbs span a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+    padding-right: 30px;
+}
+
+.breadcrumbs span a:hover {
+    color: var(--hover-main-color);
+}
+
+.breadcrumbs span:nth-child(2) {
+    word-spacing: 5px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+}
+
+.breadcrumbs {
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.title {
+    font-size: 60px;
+    color: #000000;
+    line-height: 1.2;
+    font-weight: 900;
+    font-family: var(--main-font-family);
+}
+
+@media (max-width: 768px) {
+    header {
+        background-position: 65% 0%;
+    }
+}

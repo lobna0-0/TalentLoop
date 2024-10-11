@@ -16,6 +16,7 @@ import { HotJopsComponent } from './hot-jops/hot-jops.component';
 import { TopCategoriesComponent } from './top-categories/top-categories.component';
 import { CounterTestimonialsComponent } from './counter-testimonials/counter-testimonials.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HotJopsComponent,
     TopCategoriesComponent,
     CounterTestimonialsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
