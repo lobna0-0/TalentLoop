@@ -1,33 +1,33 @@
-<div class="nav">
-  <div class="container pt-3">
-    <nav class="navbar navbar-expand-lg ">
+<div class="nav" [class.sticky]="isSticky">
+  <div class="container py-2">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="apple-touch-icon.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> TalentLoop</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse  d-lg-flex justify-content-end" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link main-link active" aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link main-link" routerLink="/about"  routerLinkActive="active">About</a>
+              <a class="nav-link main-link" routerLink="/about" routerLinkActive="active">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link main-link" routerLink="/canditates"  routerLinkActive="active">Canditates</a>
+              <a class="nav-link main-link" routerLink="/canditates" routerLinkActive="active">Canditates</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link main-link"routerLink="/blog"  routerLinkActive="active">Blog</a>
+              <a class="nav-link main-link"routerLink="/blog" routerLinkActive="active">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link main-link" routerLink="/contact"  routerLinkActive="active">Contact</a>
+              <a class="nav-link main-link" routerLink="/contact" routerLinkActive="active">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link post" routerLink="/Post-a-jop"  routerLinkActive="active">Post a Jop</a>
+              <a class="nav-link post" routerLink="/Post-a-jop" routerLinkActive="active">Post a Jop</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link want" routerLink="/want-a-jop"  routerLinkActive="active">Want a Jop</a>
+              <a class="nav-link want" routerLink="/want-a-jop" routerLinkActive="active">Want a Jop</a>
             </li>
           </ul>
         </div>
