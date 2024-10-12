@@ -1,0 +1,14 @@
+.mainsec{
+  padding: 150px 0px;
+}
+.form-control:focus {
+  border-color:black;
+  outline: 0;
+  box-shadow:none;
+}
+input{
+  color: #495057;
+}
+.btn{
+  background-color: var(--main-button-background-color);
+}
