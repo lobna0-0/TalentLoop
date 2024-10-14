@@ -6,5 +6,17 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  @HostListener('window:scroll', [])
+  onScroll() {
+    let navbar = document.getElementById('navbar');
+    if (navbar) {
+      if (window.scrollY > 300) {
+        navbar.classList.add('navbar-fixed');
+        navbar.style.backgroundColor = 'white';
+      }  else {
+        navbar.classList.remove('navbar-fixed');
+        navbar.style.backgroundColor = 'transparent';
+      }
+    }
+  }
 }

@@ -1,20 +1,32 @@
-.navbar {
-    margin-right: 6%;
-    background-color: transparent !important;
+
+.nav{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 20000;
 }
-
-
-/* .nav.sticky{
-  background-color: white !important;
-  position: sticky !important;
-  top: 300 !important;
-  z-index: 1000000 !important;
-} */
-
+.navbar{
+  margin-right: 6%;
+  background-color: transparent !important;
+  transition: background-color 0.3s ease-in-out;
+}
+.navbar-fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30000;
+  background-color: white;
+}
 .main-link {
     font-weight: bolder;
 }
-
+@media (max-width: 768px) {
+  .show ul .post {
+    margin-bottom: 5px;
+}
+}
 @media (max-width: 426px) {
     .show {
         display: block;
@@ -25,9 +37,6 @@
         z-index: 20000;
         padding: 10px;
         transition: 0s !important;
-    }
-    .show ul .post {
-        margin-bottom: 5px;
     }
 }
 
