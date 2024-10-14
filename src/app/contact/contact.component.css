@@ -12,3 +12,12 @@ input{
 .btn{
   background-color: var(--main-button-background-color);
 }
+@media(max-width: 426px) {
+  .cont-info{
+    padding: 0px 25px;
+  }
+  iframe{
+    height: 400px;
+    padding: 0px 25px;
+  }
+}

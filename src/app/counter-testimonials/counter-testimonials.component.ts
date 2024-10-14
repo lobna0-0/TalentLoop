@@ -104,7 +104,7 @@ export class CounterTestimonialsComponent implements AfterViewInit {
 
     // Next button functionality
     nextButton.addEventListener('click', () => {
-      if (scrollPosition < (carouselWidth - (itemWidth * 4))) {
+      if (scrollPosition < (carouselWidth - (itemWidth * 3))) {
         scrollPosition += itemWidth;
         carouselInner.scrollTo({
           left: scrollPosition,

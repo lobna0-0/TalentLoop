@@ -89,6 +89,11 @@
       margin-right: 30px;
     }
 }
+@media (max-width: 426px){
+  .item{
+    padding: 0px 48px;
+  }
+}
 
 .carousel-item .item{
   line-height: 1.7;
