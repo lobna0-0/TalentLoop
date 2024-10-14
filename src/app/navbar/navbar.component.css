@@ -27,6 +27,11 @@
     margin-bottom: 5px;
 }
 }
+@media (max-width: 768px) {
+  .show{
+    background-color: white;
+  }
+}
 @media (max-width: 426px) {
     .show {
         display: block;

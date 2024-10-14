@@ -14,7 +14,6 @@
   position: relative;
   padding-inline: 60px;
   background-color: var(--jobs-background-color);
-  overflow-x: hidden;
 }
 
 .jobs {
