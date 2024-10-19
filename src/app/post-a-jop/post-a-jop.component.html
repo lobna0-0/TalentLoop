@@ -5,84 +5,88 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-8 mb-5">
-        <form action="#" class="p-5 bg-white">
+        <form [formGroup]="jobPostForm" (ngSubmit)="onSubmit()" class="p-5 bg-white">
 
+          <!-- Price Options -->
           <div class="row form-group">
-            <div class="col-md-12 mb-3 mb-md-0">
+            <div class="col-md-12 mb-3">
               <label for="option-price-1">
-                <input type="checkbox" id="option-price-1"> <span class="text-success ps-2">$500</span> For 30 days
+                <input type="checkbox" formControlName="priceOption1" id="option-price-1">
+                <span class="text-success ps-2">$500</span> For 30 days
               </label>
             </div>
-            <div class="col-md-12 mb-3 mb-md-0">
+            <div class="col-md-12 mb-3">
               <label for="option-price-2">
-                <input type="checkbox" id="option-price-2"> <span class="text-success ps-2">$300</span> / Monthly Recurring
+                <input type="checkbox" formControlName="priceOption2" id="option-price-2">
+                <span class="text-success ps-2">$300</span> / Monthly Recurring
               </label>
             </div>
           </div>
 
+          <!-- Job Title -->
           <div class="row form-group">
             <div class="col-md-12 mb-3 mb-md-0">
               <label class="font-weight-bold" for="job-title">Job Title</label>
-              <input type="text" id="job-title" class="form-control" placeholder="e.g., Professional UI/UX Designer">
+              <input type="text" id="job-title" class="form-control" formControlName="jobTitle" placeholder="e.g., Professional UI/UX Designer">
+              <div *ngIf="isFieldInvalid('jobTitle')" class="text-danger">
+                Job title is required and should be between 5 and 100 characters.
+              </div>
             </div>
           </div>
 
+          <!-- Company Name -->
           <div class="row form-group mb-5">
             <div class="col-md-12 mb-3 mb-md-0">
               <label class="font-weight-bold" for="company-name">Company</label>
-              <input type="text" id="company-name" class="form-control" placeholder="e.g., Facebook, Inc.">
+              <input type="text" id="company-name" class="form-control" formControlName="companyName" placeholder="e.g., Facebook, Inc.">
+              <div *ngIf="isFieldInvalid('companyName')" class="text-danger">
+                Company name is required.
+              </div>
             </div>
           </div>
 
+          <!-- Job Type -->
           <div class="row form-group">
             <div class="col-md-12">
               <h3>Job Type</h3>
             </div>
-            <div class="col-md-12 mb-3 mb-md-0">
-              <label for="job-type-full">
-                <input type="radio" id="job-type-full" name="job-type"> Full Time
+            <div *ngFor="let jobType of jobTypes" class="col-md-12 mb-3">
+              <label>
+                <input type="radio" [value]="jobType" formControlName="jobType"> {{ jobType }}
               </label>
             </div>
-            <div class="col-md-12 mb-3 mb-md-0">
-              <label for="job-type-part">
-                <input type="radio" id="job-type-part" name="job-type"> Part Time
-              </label>
-            </div>
-            <div class="col-md-12 mb-3 mb-md-0">
-              <label for="job-type-freelance">
-                <input type="radio" id="job-type-freelance" name="job-type"> Freelance
-              </label>
-            </div>
-            <div class="col-md-12 mb-3 mb-md-0">
-              <label for="job-type-internship">
-                <input type="radio" id="job-type-internship" name="job-type"> Internship
-              </label>
-            </div>
-            <div class="col-md-12 mb-3 mb-md-0">
-              <label for="job-type-temp">
-                <input type="radio" id="job-type-temp" name="job-type"> Temporary
-              </label>
+            <div *ngIf="isFieldInvalid('jobType')" class="text-danger">
+              Please select a job type.
             </div>
           </div>
 
+          <!-- Location -->
           <div class="row form-group mb-4">
             <div class="col-md-12">
               <h3>Location</h3>
             </div>
-            <div class="col-md-12 mb-3 mb-md-0">
-              <input type="text" id="location" class="form-control" placeholder="Western City, UK">
+            <div class="col-md-12 mb-3">
+              <input type="text" formControlName="location" id="location" class="form-control" placeholder="Western City, UK">
+              <div *ngIf="isFieldInvalid('location')" class="text-danger">
+                Location is required.
+              </div>
             </div>
           </div>
 
+          <!-- Job Description -->
           <div class="row form-group">
             <div class="col-md-12">
               <h3>Job Description</h3>
             </div>
-            <div class="col-md-12 mb-3 mb-md-0">
-              <textarea name="job-description" id="job-description" class="form-control" cols="30" rows="5"></textarea>
+            <div class="col-md-12 mb-3">
+              <textarea formControlName="jobDescription" id="job-description" class="form-control" cols="30" rows="5"></textarea>
+              <div *ngIf="isFieldInvalid('jobDescription')" class="text-danger">
+                Job Description is required.
+              </div>
             </div>
           </div>
 
+          <!-- Submit Button -->
           <div class="row form-group">
             <div class="col-md-12">
               <input type="submit" value="Post" class="btn btn-primary py-2 px-5">
