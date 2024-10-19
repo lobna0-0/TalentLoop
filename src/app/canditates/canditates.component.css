@@ -72,10 +72,7 @@ h2 {
     background-color: var(--hover-main-button-background-color);
 }
 
-
-/*********** Pagination **********/
-
-.pagination ul {
+.block-27 ul {
     padding: 0;
     margin: 0;
     display: flex;
@@ -83,24 +80,24 @@ h2 {
     justify-content: center;
 }
 
-.pagination ul li {
+.block-27 ul li {
     display: inline-block;
 }
 
-.pagination ul li.active span {
+.block-27 ul li.active span {
     background: #ff6347;
     color: #fff;
     border: 1px solid transparent;
 }
 
-.pagination ul li a:hover {
+.block-27 ul li a:hover {
     background: #ff6347;
     color: #fff;
     border: 1px solid transparent;
 }
 
-.pagination ul li a,
-.pagination ul li span {
+.block-27 ul li a,
+.block-27 ul li span {
     color: #ff6347;
     display: inline-block;
     width: 40px;
