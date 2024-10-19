@@ -12,7 +12,7 @@
       <div class="col-md-3">
         <p class="text-black-50">
           <span>Address:</span>
-           198 West 21th Street, Suite 721 New York NY 10016
+          198 West 21th Street, Suite 721 New York NY 10016
         </p>
       </div>
       <div class="col-md-3">
@@ -36,20 +36,44 @@
     </div>
     <div class="row">
       <div class="col-md-6 order-md-last d-flex">
-        <form action="" class="bg-white p-5 w-100">
+        <form action="" #logForm="ngForm" (ngSubmit)="run()" class="bg-white p-5 w-100">
           <div class="mb-3">
-            <input type="text" class="form-control py-3  rounded-2 w-100" id="name" placeholder="Your Name">
+            <input type="text" class="form-control py-3  rounded-2 w-100" id="name" placeholder="Your Name" name="username" ngModel #username="ngModel" required>
           </div>
+          @if (username.invalid && (username.dirty || username.touched)) {
+            <div class="my-3 ms-2" style="color: red;">please enter name</div>
+          }
+          @else if (username.invalid && logForm.submitted) {
+            <div class="my-3 ms-2" style="color: red;">please enter name</div>
+          }
           <div class="mb-3">
-            <input type="email" class="form-control py-3  rounded-2 w-100" id="email" placeholder="Your Email">
+            <input type="email" class="form-control py-3  rounded-2 w-100" id="email" placeholder="Your Email" name="email" ngModel #email="ngModel" required>
           </div>
+          @if (email.invalid && (email.dirty || email.touched)) {
+            <div class="my-3 ms-2" style="color: red;">please enter email</div>
+          }
+          @else if (email.invalid && logForm.submitted) {
+            <div class="my-3 ms-2" style="color: red;">please enter email</div>
+          }
           <div class="mb-3">
-            <input type="text" class="form-control py-3  rounded-2 w-100" id="subject" placeholder="Your Subject">
+            <input type="text" class="form-control py-3  rounded-2 w-100" id="subject" placeholder="Your Subject" name="subject" ngModel #subject="ngModel" required>
           </div>
+          @if (subject.invalid && (subject.dirty || subject.touched)) {
+            <div class="my-3 ms-2" style="color: red;">please enter subject</div>
+          }
+          @else if (subject.invalid && logForm.submitted) {
+            <div class="my-3 ms-2" style="color: red;">please enter subject</div>
+          }
           <div class="mb-3">
-            <textarea class="form-control rounded-2" id="message" rows="7" placeholder="Message"></textarea>
+            <textarea class="form-control rounded-2" id="message" rows="7" placeholder="Message" name="message" ngModel #message="ngModel" required></textarea>
           </div>
-          <button type="button" class="btn btn-lg text-white px-4 py-3 rounded-2">Send Message</button>
+          @if (message.invalid && (message.dirty || message.touched)) {
+            <div class="my-3 ms-2" style="color: red;">please enter message</div>
+          }
+          @else if (message.invalid && logForm.submitted) {
+            <div class="my-3 ms-2" style="color: red;">please enter message</div>
+          }
+          <button  class="btn btn-lg text-white px-4 py-3 rounded-2">Send Message</button>
         </form>
       </div>
       <div class="col-md-6">

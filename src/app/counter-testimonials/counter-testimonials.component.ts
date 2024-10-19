@@ -19,7 +19,7 @@ export class CounterTestimonialsComponent implements AfterViewInit {
   companyCount: number = 0;
   companyCountStop: any;
 
-  // Flag to check if the counters have started
+  // to check if the counters have started
   private countersStarted: boolean = false;
 
   constructor(private el: ElementRef) {}
@@ -48,7 +48,7 @@ export class CounterTestimonialsComponent implements AfterViewInit {
       this.startCounters();
     }
   }
-
+// counter-section
   startCounters() {
     this.jopCountStop = setInterval(() => {
       this.jopCount += 800;
@@ -83,6 +83,7 @@ export class CounterTestimonialsComponent implements AfterViewInit {
     }, 10);
   }
 
+  // testimonials-section
   // Use AfterViewInit to ensure DOM is fully loaded before manipulating it
   ngAfterViewInit() {
     const carouselInner = document.querySelector('.carousel-inner') as HTMLElement;

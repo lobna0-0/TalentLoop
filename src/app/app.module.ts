@@ -17,6 +17,8 @@ import { TopCategoriesComponent } from './top-categories/top-categories.componen
 import { CounterTestimonialsComponent } from './counter-testimonials/counter-testimonials.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './header/header.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    FormsModule,
   ],
   providers: [
     provideClientHydration()
