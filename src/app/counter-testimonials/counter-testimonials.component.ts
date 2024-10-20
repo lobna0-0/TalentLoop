@@ -59,7 +59,7 @@ export class CounterTestimonialsComponent implements AfterViewInit {
     }, 5);
 
     this.memberCountStop = setInterval(() => {
-      this.memberCount += 60;
+      this.memberCount += 80;
       if (this.memberCount >= 40000) {
         clearInterval(this.memberCountStop);
         this.memberCount = 40000;
