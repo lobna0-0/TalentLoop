@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
       }
     }
 
-    // if all element moved up don't go to loop 
+    // if all element moved up don't go to loop
     if(!secOne[secOne.length - 1].classList.contains('move-up')){
     secOne.forEach((element: HTMLElement) => {
       let elementPosition = element.getBoundingClientRect().top;
@@ -37,7 +37,6 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-
 
   if(!hot[hot.length - 1].classList.contains('move-up')){
     hot.forEach((element: HTMLElement) => {
@@ -65,9 +64,7 @@ export class HomeComponent implements OnInit {
       }
     }
   }
-
-
-
+//====================================================================================
   //code counter 200,000
   jopCount: number = 0; // starting number
   finalJopCount: number = 200000; // target number
@@ -89,7 +86,6 @@ export class HomeComponent implements OnInit {
     }, this.incrementSpeed);
   }
 //=================================================================================
-
   //code navTab
   activeTab: string = 'job';
   switchTab(tab: string){

@@ -6,6 +6,11 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
+  scrollTop(){
+    scrollTo(0 ,0);
+  }
+
   @HostListener('window:scroll', [])
   onScroll() {
     let navbar = document.getElementById('navbar');
@@ -19,4 +24,5 @@ export class NavbarComponent {
       }
     }
   }
+
 }
