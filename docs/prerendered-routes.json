@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/",
+    "/about",
+    "/blog",
+    "/canditates",
+    "/contact",
+    "/home",
+    "/Post-a-jop",
+    "/want-a-jop"
+  ]
+}
